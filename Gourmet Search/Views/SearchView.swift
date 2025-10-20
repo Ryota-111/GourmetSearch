@@ -17,6 +17,7 @@ struct SearchView: View {
     @State private var selectedRange : SearchRange = .m300
     @State private var keyword: String = ""
     @State private var navigateResults = false
+    @Environment(\.colorScheme) var colorScheme
 
     // MARK: - body
     var body: some View {
@@ -57,11 +58,11 @@ struct SearchView: View {
                             endPoint: .bottomTrailing
                         )
                     )
-                    .frame(width: 70, height: 70)
+                    .frame(width: 65, height: 65)
                     .shadow(color: .orange.opacity(0.3), radius: 12, x: 0, y: 6)
 
                 Image(systemName: "fork.knife")
-                    .font(.system(size: 36, weight: .semibold))
+                    .font(.system(size: 33, weight: .semibold))
                     .foregroundColor(.white)
             }
 
