@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showSplash = true
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            SearchView()
+                .opacity(showSplash ? 0 : 1)
+
+            if showSplash {
+                SplashView(isPresented: $showSplash)
+                    .transition(.opacity)
+                    .zIndex(1)
+            }
         }
-        .padding()
     }
 }
 
