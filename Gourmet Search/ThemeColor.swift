@@ -52,7 +52,6 @@ struct OrangeSecondaryButtonStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding()
-            .background(Color.white)
             .foregroundColor(.myOrange)
             .overlay(
                 RoundedRectangle(cornerRadius: 12)

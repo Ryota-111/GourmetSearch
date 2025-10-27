@@ -108,7 +108,7 @@ struct RestaurantDetailView: View {
             VStack(alignment: .leading, spacing: 4) {
                 Label("ジャンル", systemImage: "tag.fill")
                     .font(.caption)
-                    .foregroundColor(.orange)
+                    .foregroundColor(.myOrange)
                 Text(restaurant.genre.name)
                     .font(.body)
             }
@@ -130,7 +130,7 @@ struct RestaurantDetailView: View {
         VStack(alignment: .leading, spacing: 8) {
             Label("住所", systemImage: "mappin.and.ellipse")
                 .font(.headline)
-                .foregroundColor(.orange)
+                .foregroundColor(.myOrange)
 
             Text(restaurant.address)
                 .font(.body)
@@ -142,7 +142,7 @@ struct RestaurantDetailView: View {
         VStack(alignment: .leading, spacing: 8) {
             Label("アクセス", systemImage: "train.side.front.car")
                 .font(.headline)
-                .foregroundColor(.orange)
+                .foregroundColor(.myOrange)
 
             Text(restaurant.access)
                 .font(.body)
@@ -154,7 +154,7 @@ struct RestaurantDetailView: View {
         VStack(alignment: .leading, spacing: 8) {
             Label("営業時間", systemImage: "clock.fill")
                 .font(.headline)
-                .foregroundColor(.orange)
+                .foregroundColor(.myOrange)
 
             VStack(alignment: .leading, spacing: 4) {
                 if !restaurant.open.isEmpty {
@@ -183,7 +183,7 @@ struct RestaurantDetailView: View {
         VStack(alignment: .leading, spacing: 8) {
             Label("地図", systemImage: "map.fill")
                 .font(.headline)
-                .foregroundColor(.orange)
+                .foregroundColor(.myOrange)
 
             Map(initialPosition: .region(region)) {
                 Marker(restaurant.name, coordinate: CLLocationCoordinate2D(

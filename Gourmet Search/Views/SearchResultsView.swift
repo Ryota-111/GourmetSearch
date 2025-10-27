@@ -171,7 +171,7 @@ struct RestaurantView: View {
                 HStack(spacing: 4) {
                     Image(systemName: "tag.fill")
                         .font(.caption)
-                        .foregroundColor(.orange)
+                        .foregroundColor(.myOrange)
                     Text(restaurant.genre.name)
                         .font(.caption)
                         .foregroundColor(.orange)

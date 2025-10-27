@@ -22,27 +22,27 @@ struct SearchView: View {
     // MARK: - body
     var body: some View {
         NavigationStack {
-                VStack(spacing: 10) {
-                    header
-                    
-                    location
-                    
-                    searchRange
-                    
-                    keywordSearch
-                    
-                    Spacer()
-                    
-                    searchButton
-                }
-                .padding()
-                .navigationTitle("レストラン検索")
-                .navigationDestination(isPresented: $navigateResults) {
-                    SearchResultsView(viewModel: viewModel)
-                }
-                .onAppear {
-                    locationManager.requestLocationPermission()
-                }
+            VStack(spacing: 10) {
+                header
+                
+                location
+                
+                searchRange
+                
+                keywordSearch
+                
+                Spacer()
+                
+                searchButton
+            }
+            .padding()
+            .navigationTitle("Gourmet Search")
+            .navigationDestination(isPresented: $navigateResults) {
+                SearchResultsView(viewModel: viewModel)
+            }
+            .onAppear {
+                locationManager.requestLocationPermission()
+            }
         }
     }
     
@@ -77,7 +77,7 @@ struct SearchView: View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
                 Image(systemName: "location.fill")
-                    .foregroundColor(.orange)
+                    .foregroundColor(.myOrange)
                 Text("現在地")
                     .font(.title3.bold())
             }
@@ -139,7 +139,7 @@ struct SearchView: View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
                 Image(systemName: "map.circle.fill")
-                    .foregroundColor(.orange)
+                    .foregroundColor(.myOrange)
                 Text("検索範囲")
                     .font(.title3.bold())
             }
@@ -158,7 +158,7 @@ struct SearchView: View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
                 Image(systemName: "magnifyingglass")
-                    .foregroundColor(.orange)
+                    .foregroundColor(.myOrange)
                 Text("キーワード")
                     .font(.title3.bold())
                 Text("(任意)")
