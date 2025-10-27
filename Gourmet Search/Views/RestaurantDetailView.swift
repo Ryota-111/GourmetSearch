@@ -217,7 +217,7 @@ struct RestaurantDetailView: View {
                             .fontWeight(.semibold)
                     }
                     .frame(maxWidth: .infinity)
-                    .orangePrimaryButton()
+                    .orangeSecondaryButton()
                 }
             }
 
